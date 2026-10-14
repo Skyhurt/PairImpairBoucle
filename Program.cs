@@ -11,5 +11,23 @@ class Program
          * Demandez à l'utilisateur s'il veut proposer un autre nombre
          *  On lui permet de le faire lorsqu'il entre "y". Dans les autres cas, on termine le programme
          */
+        int testedNumber;
+        string continueTesting;
+        do
+        {
+            Console.WriteLine("Choisi un nombre");
+            testedNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (testedNumber % 2 == 0)
+            {
+                Console.WriteLine("Le nombre est pair");
+            } else
+                {
+                    Console.WriteLine("Le nombre est impair");
+                }
+        Console.WriteLine("Voulez-vous vérifier un autre nombre ? y/n");
+        continueTesting = Console.ReadLine();
+
+        } while (continueTesting == "y" || continueTesting == "Y");
     }
 }
